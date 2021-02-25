@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent {
+        display: flex;
+
+    }
+
+    .inner {
+        width: 20px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <!-- ax = b -->
+        <input class="inner" placeholder="a" type="text" id="a">
+        <span class="inner">x</span>
+        <span class="inner">=</span>
+        <input class="inner" placeholder="b" type="text" id="b">
+    </div>
+    <br>
+    <input id="solve" type="submit" value="solve">
+
+    <script>
+        let solve = document.querySelector("#solve");
+        solve.addEventListener("click", function () {
+            let a = parseInt(document.querySelector("#a").value);
+            let b = parseInt(document.querySelector("#b").value);
+
+            let finalResult = b / a;
+
+            alert("the result is: " + finalResult);
+        });
+    </script>
+</body>
+
+</html>
